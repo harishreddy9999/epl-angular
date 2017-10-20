@@ -1,0 +1,104 @@
+<!-- <div>
+	<button ng-repeat="match in $ctrl.matches.rounds" class="btn btn-success">
+		{{match.name}}
+	</button>
+</div> -->
+<div class="container" style="background:url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/07/white-background-3.jpg')">
+<div class="row">
+  <h2 class="text-center">match Table</h2>
+  <span class="pull-left">&nbsp;&nbsp;&nbsp;&nbsp;Sort by (date)/(team-name) : &nbsp; <input ng-model="sortCriteria"/></span>&nbsp;&nbsp;&nbsp;<hr>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">Date</th>
+        <th class="text-center">Day</th>
+        <th class="text-center">Team 1</th>
+        <th class="text-center">Score</th>
+        <th class="text-center">Score</th>
+        <th class="text-center">Team 2</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="match in $ctrl.matches.rounds">
+      <tr ng-repeat="singlematch in match.matches | filter:sortCriteria" ui-sref="singlematch({matchday: match.name, team1code: singlematch.team1.code})">
+        <th scope="row"> {{singlematch.date | date}} </th>     
+        <td> {{match.name}} </td>
+        <td> {{singlematch.team1.name}} </td>
+        <td> {{singlematch.score1}} </td>
+        <td> {{singlematch.score2}} </td>
+        <td> {{singlematch.team2.name}} </td>
+      </tr>
+<!--       <tr>
+        <th scope="row"> {{match.matches[1].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[1].team1.name}} </td>
+        <td> {{match.matches[1].score1}} </td>
+        <td> {{match.matches[1].score2}} </td>
+        <td> {{match.matches[1].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[2].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[2].team1.name}} </td>
+        <td> {{match.matches[2].score1}} </td>
+        <td> {{match.matches[2].score2}} </td>
+        <td> {{match.matches[2].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[3].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[3].team1.name}} </td>
+        <td> {{match.matches[3].score1}} </td>
+        <td> {{match.matches[3].score2}} </td>
+        <td> {{match.matches[3].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[4].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[4].team1.name}} </td>
+        <td> {{match.matches[4].score1}} </td>
+        <td> {{match.matches[4].score2}} </td>
+        <td> {{match.matches[4].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[5].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[5].team1.name}} </td>
+        <td> {{match.matches[5].score1}} </td>
+        <td> {{match.matches[5].score2}} </td>
+        <td> {{match.matches[5].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[6].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[6].team1.name}} </td>
+        <td> {{match.matches[6].score1}} </td>
+        <td> {{match.matches[6].score2}} </td>
+        <td> {{match.matches[6].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[7].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[7].team1.name}} </td>
+        <td> {{match.matches[7].score1}} </td>
+        <td> {{match.matches[7].score2}} </td>
+        <td> {{match.matches[7].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[8].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[8].team1.name}} </td>
+        <td> {{match.matches[8].score1}} </td>
+        <td> {{match.matches[8].score2}} </td>
+        <td> {{match.matches[8].team2.name}} </td>
+      </tr>
+      <tr>
+        <th scope="row"> {{match.matches[9].date}} </th>
+        <td> {{match.name}} </td>
+        <td> {{match.matches[9].team1.name}} </td>
+        <td> {{match.matches[9].score1}} </td>
+        <td> {{match.matches[9].score2}} </td>
+        <td> {{match.matches[9].team2.name}} </td>
+      </tr> -->
+    </tbody>
+  </table>                                  
+</div></div>
